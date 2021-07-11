@@ -18,7 +18,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      id:"",           //변수선언
+      id:"",               //변수선언
       password:"",     
       result: ""
     }
