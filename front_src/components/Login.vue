@@ -25,15 +25,15 @@ export default {
   },
   methods: {
    Success() {
-     this.result = axios.get('signIn/into?id='+this.id+'&password='+this.password)
+     this.result = axios.post('signIn/into?id='+this.id+'&password='+this.password)
      console.log(this.result)
    },
     join() {
-     axios.get('signup/save?id='+this.id+'&password='+this.password)
+     axios.post('signup/save?id='+this.id+'&password='+this.password)
       alert('회원가입이 완료되었습니다.')
     },
     LoginSuccess() {
-        this.$router.push('/LoginSuccess')                      //index.js 파일 내의 path를 통해 components 폴더 내 해당 파일이 실행(router의 역할)
+        this.$router.push('/LoginSuccess')          //index.js 파일 내의 path를 통해 components 폴더 내 해당 파일이 실행(router의 역할)
       },
       LoginFail(){
         this.$router.push('/Loginfail')
