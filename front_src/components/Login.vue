@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import axios from 'axios'  //데이터를 주고받기 위해 사용
+import axios from 'axios'                                      //데이터를 주고받기 위해 사용
 
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      id:"",               //변수선언
+      id:"",                                                    //변수선언
       password:"",     
       result: ""
     }
@@ -33,7 +33,7 @@ export default {
       alert('회원가입이 완료되었습니다.')
     },
     LoginSuccess() {
-        this.$router.push('/LoginSuccess')
+        this.$router.push('/LoginSuccess')                      //index.js 파일 내의 path를 통해 components 폴더 내 해당 파일이 실행(router의 역할)
       },
       LoginFail(){
         this.$router.push('/Loginfail')
