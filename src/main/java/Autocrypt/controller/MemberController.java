@@ -14,10 +14,10 @@ import Autocrypt.dto.Member;
 import Autocrypt.dto.MemberRepository;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor 							// final 생성자 만들기
-@SessionAttributes("member") 							// model 정보를 http세션에 담아주는 어노테이션 _ 여러 화면/요청에서 사용해야 하는 객체를 공유할 때 사용
-										// model.addAttribute의 attributeName과 @SessionAttributes의 괄호값이 같다면 model에 추가될 때
-										// 자동으로 세션으로 넣어줌
+@RequiredArgsConstructor 					// final 생성자 만들기
+@SessionAttributes("member") 					// model 정보를 http세션에 담아주는 어노테이션 _ 여러 화면/요청에서 사용해야 하는 객체를 공유할 때 사용
+								// model.addAttribute의 attributeName과 @SessionAttributes의 괄호값이 같다면 model에 추가될 때
+								// 자동으로 세션으로 넣어줌
 @RestController
 public class MemberController {
 
