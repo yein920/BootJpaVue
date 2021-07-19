@@ -1,6 +1,5 @@
 <template>
 <div>
-
   <input type="id" placeholder="input your id" v-model="id">
   <input type="password" placeholder="input your password" v-model="password">
 
@@ -25,11 +24,11 @@ export default {
   },
   methods: {
    Success() {
-     this.result = axios.post('signIn/into?id='+this.id+'&password='+this.password)
+     this.result = axios.get('signIn/into?id='+this.id+'&password='+this.password)
      console.log(this.result)
    },
     join() {
-     axios.post('signup/save?id='+this.id+'&password='+this.password)
+     axios.get('signup/save?id='+this.id+'&password='+this.password)
       alert('회원가입이 완료되었습니다.')
     },
     LoginSuccess() {
