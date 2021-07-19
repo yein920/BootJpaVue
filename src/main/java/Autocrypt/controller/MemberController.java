@@ -27,8 +27,8 @@ public class MemberController {
 	@GetMapping("signIn/into") 						// 로그인
 	public String Signin(String id, String password) {
 		Member member = memberR.findByIdAndPassword(id, password);	//jpaRepository 내 find메소드를 이용하여 해당 id와 password가 있는지 확인진행
-		if(member != null) {																			//DB에 저장되어있는지 확인 후 로그인 여부를 알려줍니다. 
-			return "loginOK";																			//실행시, 반환값을 개발자도구를 통해 확인했습니다.(영상)
+		if(member != null) {						//DB에 저장되어있는지 확인 후 로그인 여부를 알려줍니다. 
+			return "loginOK";					//실행시, 반환값을 개발자도구를 통해 확인했습니다.(영상)
 		} else {
 			return "loginFail";
 		}
